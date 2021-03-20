@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+  <script>
+      var notificationCount =
+      {{ UNREAD_NOTIFICATION_COUNT }}
+      var Notifications = function (url) {
+          socket = new WebSocket(url + '?user_id=' + {{ request.user.id }});
+
+          socket.onopen = function () {
+              console.log('Successful Connection To Server.');
+          };
+          socket.onmessage = function (event) {
+              notificationCount += 1;
+              updateUnreadNotificationCount(notificationCount);
+          }
+      };
+      var host = 'ws://localhost:3000/client';
+      var socket = Notifications(host);
+  </script>
+{% endif %}
+{% include 'include/header.html' %}
+
+{% block content %}
+{% endblock %}
+
+{% include 'include/footer.html' %}
+
+</body>
+</html>

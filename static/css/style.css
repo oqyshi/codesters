@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.dashboard{
+    max-width: 17%;
+    background-color: #7686A6;
+    height: 100vh;
+    padding: .5%;
+    float: left;
+    position: fixed;
+}
+
+.avatar-div{
+    padding: 0;
+}
+
+.main-board{
+    width: 83%;
+    float: right;
+    height: 100vh;
+}
+
+.clock {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center  ;
+}
+
+.name{
+    font-size: 14px;
+}
+
+.title{
+    font-size: 10px;
+}
+
+.avatar{
+    height: 50px;
+    border-radius: 100px;
+    width: 50px;
+}
+
+.white-text{
+    color: white;
+    padding: 3% 0;
+}
+
+.center{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.settings{
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
+.info{
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 0;
+}
+
+.no-padding-margin{
+    margin: 0;
+    padding: 0;
+}
+
+.white-line{
+    color: white;
+    height: 2px !important;
+    background-color: white !important;
+    opacity: 1;
+}
+
+.start{
+    height: 40px;
+}
+
+.digital-clock{
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.settings-div{
+    padding: 6% 0;
+}
+
+.logo-center{
+    display: block;
+    margin: 10px auto;
+    max-width: 40%;
+}
+
+.btn-dash{
+    width: 80%;
+    margin: 10px 10%;
+    background-color: rgb(255, 255, 255, 0.8);
+    box-shadow: 5px 5px 5px rgb(0,0,0, .3);
+}
+
+.mail{
+    height: 25px;
+    width: 25px;
+}
+
+.notification{
+    background-color: #D5D973;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1% 5%;
+    border-radius:0 0 15px 15px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px rgb(0,0,0, .3);
+}
+
+.meetings{
+    margin: 3% 0;
+    padding: 5%;
+    background-color: rgb(217,217,217, 0.7);
+}
+
+.card{
+    border-radius: 15px;
+    padding: 0 !important;
+    background-color: #D5D973;
+    border: 1px solid black;
+}
+
+.img-top{
+    width: 100%;
+    margin: 0 !important;
+    border-radius: 15px 15px 0 0;
+    padding: 0 !important;
+    border-bottom: 1px solid black;
+}
+
+.card-body{
+    font-weight: bold;
+}
+
+#chartContainerP{
+    margin: 0 10%;
+    display: block;
+    position: relative;
+}
+
+.footer{
+    clear: both;
+    width: 100%;
+}

@@ -5,5 +5,6 @@ from . import views
 app_name = 'office'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
+    path('gameroom/', views.GameView.as_view(), name='game'),
 
 ]
