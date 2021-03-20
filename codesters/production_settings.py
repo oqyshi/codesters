@@ -5,7 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^4386=#q$b)f&ete(k2y0kp#8i*4qiv_q&abt$_*vvi2qoo3tj'
 
 DEBUG = True
-ALLOWED_HOSTS = ['134.122.74.177']
+ALLOWED_HOSTS = ['134.122.74.177','oqyshi.kz']
 
 # DATABASES = {
 #     'default': {

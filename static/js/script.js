@@ -1,5 +1,5 @@
 function setQuote() {
-    fetch('https://api.js-on.de/quote')
+    fetch('https://oqyshi.kz/quote/')
         .then(response => response.json())
         .then(data => document.getElementById("quote").innerHTML = data.quote);
 };
@@ -46,6 +46,6 @@ function renderChart(health_data) {
     });
     chart.render();
 }
-fetch('https://api.js-on.de/health/1')
+fetch('https://oqyshi.kz/health/1')
     .then(response => response.json())
     .then(data => renderChart(data.health_data));

@@ -1,6 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Game Room {% endblock title %}
+    <script src='https://meet.jit.si/external_api.js'></script>
 {% block content %}
-Hello
+    <h1>Lets see if we can include Jitsi Meet to our project or not.</h1>
+    <div class="meet" id="meet" name="meet"></div>
 {% endblock content %}
+<script>
+    const domain = 'meet.jit.si';
+    const options = {
+        roomName: 'START_Hack_2021_Test',
+        width: 700,
+        height: 700,
+        parentNode: document.querySelector('#meet'),
+    };
+    const api = new JitsiMeetExternalAPI(domain, options);
+    const pass = "1234";
+
+    setTimeout(() => {
+        // set new password for channel
+        api.addEventListener('participantRoleChanged', function (event) {
+            if (event.role === "moderator") {
+                api.executeCommand('password', pass);
+            }
+        });
+    }, 1);
+</script>
