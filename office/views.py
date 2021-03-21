@@ -14,6 +14,12 @@ class IndexView(View):
         return render(request, 'index.html')
 
 
+class WhiteboardView(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'office/whiteboard.html')
+
+
 class GameView(View):
 
     def get(self, request, *args, **kwargs):
@@ -24,6 +30,7 @@ class HealtView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'office/health.html')
+
 
 class RecipyView(View):
 

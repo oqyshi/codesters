@@ -41,11 +41,11 @@
     <hr class="white-line">
     <div id="MyClockDisplay" class="clock digital-clock" onload="showTime()"></div>
 
-    <a href="{% url 'office:index' %}" class="btn center btn-dash">Main Room</a>
-    <a href="{% url 'office:game' %}" class="btn center btn-dash">Chilling Room</a>
-    <a href="{% url 'office:recipy' %}" class="btn center btn-dash">Recipes</a>
-    <a href="{% url 'office:healthy' %}" class="btn center btn-dash">Health Statistics</a>
-    <a class="btn center btn-dash">Whiteboard</a>
+    <button id="gamingroom" class="btn center btn-dash">Game Room</button>
+    <button id="gamingroom" class="btn center btn-dash">Chilling Room</button>
+    <button id='recipy' class="btn center btn-dash">Recipes</button>
+    <button id='healthy' class="btn center btn-dash">Health Statistics</button>
+    <button id='whiteboard' class="btn center btn-dash">Whiteboard</button>
 
   </div>
 
@@ -162,7 +162,22 @@
 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script src="{% static 'js/script.js' %}"></script>
+<script>
+    var whiteboard = document.getElementById('whiteboard')
+    whiteboard.addEventListener("click", function () {
+        window.open("{% url 'office:whiteboard' %}", 'popUpWindow', 'height=600,width=600,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+    })
 
+    var recipy = document.getElementById('recipy')
+    recipy.addEventListener("click", function () {
+        window.open("{% url 'office:recipy' %}", 'popUpWindow', 'height=600,width=600,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+    })
+
+    var healthy = document.getElementById('healthy')
+    healthy.addEventListener("click", function () {
+        window.open("{% url 'office:healthy' %}", 'popUpWindow', 'height=600,width=600,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+    })
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>

@@ -6,12 +6,7 @@ function setQuote() {
 
 setInterval(() => {
     setQuote();
-}, 3000);
-
-
-
-
-
+}, 10000);
 
 
 function showTime() {
@@ -35,8 +30,6 @@ function showTime() {
 showTime();
 
 
-
-
 function renderChart(health_data) {
     var chart = new CanvasJS.Chart("chartContainer", {
         theme: "light2",
@@ -51,29 +44,45 @@ function renderChart(health_data) {
     });
     chart.render();
 }
+
 fetch('https://oqyshi.kz/health/1')
     .then(response => response.json())
     .then(data => renderChart(data.health_data));
 
-    tasksMeeting.onclick = () => {
-        window.open('https://meet.jit.si/START_Hack_2021_Test','popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-    }
 
-    boardMeeting.onclick = () => {
-        window.open('https://meet.jit.si/START_Hack_2021_Test','popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
-    }
+function openMeeting() {
+    window.open('https://meet.jit.si/START_Hack_2021_Test', 'popUpWindow', 'height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
+}
+var gamingRoom = document.getElementById('gamingroom');
 
-    calendar.addEventListener("click", function(){
-        alert("Calendar!")
-    })
+gamingRoom.addEventListener("click", function () {
+    openMeeting();
+});
+
+
+tasksMeeting.onclick = () => {
+    openMeeting();
+}
+
+boardMeeting.onclick = () => {
+    openMeeting();
+}
+
+calendar.addEventListener("click", function () {
+    alert("Calendar!")
+})
+
 
 
 var hidebtn = document.getElementById("hide")
-hidebtn.addEventListener("click", function(){
+hidebtn.addEventListener("click", function () {
     document.getElementById("collapseExample").style.display = "none";
 })
 
 var showbtn = document.getElementById("show")
-showbtn.addEventListener("click", function(){
+showbtn.addEventListener("click", function () {
     document.getElementById("collapseExample").style.display = "block";
 })
+
+
+

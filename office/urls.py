@@ -11,5 +11,6 @@ urlpatterns = [
     path('health/', views.HealtView.as_view(), name='healthy'),
     path('recypy/', views.get_random_recipe, name='recypy'),
     path('recipy/', views.RecipyView.as_view(), name='recipy'),
+    path('whiteboard/', views.WhiteboardView.as_view(), name='whiteboard'),
 
 ]
