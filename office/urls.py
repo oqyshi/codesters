@@ -8,5 +8,8 @@ urlpatterns = [
     path('gameroom/', views.GameView.as_view(), name='game'),
     path('quote/', views.get_quote, name='quote'),
     path('health/<int:uid>', views.get_health, name='health'),
+    path('health/', views.HealtView.as_view(), name='healthy'),
+    path('recypy/', views.get_random_recipe, name='recypy'),
+    path('recipy/', views.RecipyView.as_view(), name='recipy'),
 
 ]

@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
-
+    font-family: 'Lato', sans-serif;
 }
 
-.dashboard{
+.dashboard {
     max-width: 17%;
     background-color: #7686A6;
     height: 100vh;
@@ -13,11 +13,11 @@
     position: fixed;
 }
 
-.avatar-div{
+.avatar-div {
     padding: 0;
 }
 
-.main-board{
+.main-board {
     width: 83%;
     float: right;
     height: 100vh;
@@ -28,115 +28,140 @@
     font-weight: bold;
     font-size: 20px;
     font-family: 'Orbitron', sans-serif;
-    text-align: center  ;
+    text-align: center;
 }
 
-.name{
+.name {
     font-size: 14px;
 }
 
-.title{
+.title {
     font-size: 10px;
 }
 
-.avatar{
+.avatar {
     height: 50px;
     border-radius: 100px;
     width: 50px;
 }
 
-.white-text{
+.white-text {
     color: white;
     padding: 3% 0;
 }
 
-.center{
+.center {
     vertical-align: middle;
     text-align: center;
 }
 
-.settings{
+.settings {
     width: 25px;
     height: 25px;
     display: block;
 }
 
-.info{
+.info {
     margin: 0;
     padding-left: 5px;
     padding-right: 0;
 }
 
-.no-padding-margin{
+.no-padding-margin {
     margin: 0;
     padding: 0;
 }
 
-.white-line{
+.white-line {
     color: white;
     height: 2px !important;
     background-color: white !important;
     opacity: 1;
 }
 
-.start{
+.start {
     height: 40px;
 }
 
-.digital-clock{
+.digital-clock {
     height: 50px;
     display: block;
     margin: 0 auto;
     width: 50%;
 }
 
-.settings-div{
+.settings-div {
     padding: 6% 0;
 }
 
-.logo-center{
+.logo-center {
     display: block;
     margin: 10px auto;
     max-width: 40%;
 }
 
-.btn-dash{
+.btn-dash {
     width: 80%;
     margin: 10px 10%;
-    background-color: rgb(255, 255, 255, 0.8);
-    box-shadow: 5px 5px 5px rgb(0,0,0, .3);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
 
-.mail{
+.mail {
     height: 25px;
     width: 25px;
 }
 
-.notification{
+.notification {
     background-color: #D5D973;
     width: 60%;
     margin: 0 auto;
     padding: 1% 5%;
-    border-radius:0 0 15px 15px;
+    border-radius: 0 0 15px 15px;
     text-align: center;
     font-weight: bold;
-    box-shadow: 5px 5px 5px rgb(0,0,0, .3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
 
-.meetings{
+.meetings {
     margin: 3% 0;
     padding: 5%;
-    background-color: rgb(217,217,217, 0.7);
+    background-color: rgba(217, 217, 217, 0.7);
+    padding-bottom: 0 !important;
+    border-bottom: 1px solid black;
 }
 
-.card{
+.btn-food {
+    display: block;
+    margin: 5% auto 0;
+    background: url("../images/food-wallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    text-align: center;
+    color: black !important;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 15px 15px 0 0;
+}
+
+.food-background {
+    /* background: url("../images/food-wallpaper.png"); */
+    background-color: whitesmoke;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
     border-radius: 15px;
     padding: 0 !important;
     background-color: #D5D973;
     border: 1px solid black;
+    cursor: pointer;
 }
 
-.img-top{
+.img-top {
     width: 100%;
     margin: 0 !important;
     border-radius: 15px 15px 0 0;
@@ -144,17 +169,107 @@
     border-bottom: 1px solid black;
 }
 
-.card-body{
+.card-body {
     font-weight: bold;
+    vertical-align: middle;
+    padding: 10px;
 }
 
-#chartContainerP{
-    margin: 0 10%;
+.text {
+    vertical-align: middle;
+    padding: 5%;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-online {
+    background-color: #2ecc71;
+}
+
+.dot-offline {
+    background-color: #d63031;
+}
+
+#chartContainerP {
     display: block;
     position: relative;
 }
 
-.footer{
+.footer {
     clear: both;
     width: 100%;
+}
+
+.accordion-item:last-of-type .accordion-collapse {
+    border-radius: 0 !important;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.quote {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    background-color: #7686A6;
+    padding: 1% 5%;
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    margin: 2% auto;
+    display: block;
+}
+
+.collapse-food-menu, .accordion-body {
+    border-radius: 0 !important;
+}
+
+.online {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-chat {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-tables {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    margin: 5%;
+    height: 70px;
+    width: 70px;
+}
+
+.food-col {
+    vertical-align: middle;
+    padding-top: 10%;
+}
+
+.hide {
+    outline: none;
+    border: none;
+    background: none;
+    color: #d63031;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    width: auto;
+    margin-left: auto;
+    margin-right: 0;
+    clear: both;
+    overflow: hidden;
+    display: block;
 }

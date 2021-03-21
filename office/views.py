@@ -1,13 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.views.generic.base import View
-# from annoying.functions import get_object_or_None
-# from celery import shared_task
-import requests
 from random import choice
 from .quotes import QUOTES
 import random
 import json
 from django.http import JsonResponse
+from django import template
 
 
 class IndexView(View):
@@ -20,6 +18,17 @@ class GameView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'office/game.html')
+
+
+class HealtView(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'office/health.html')
+
+class RecipyView(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'office/recipy.html')
 
 
 def get_quote(request):
@@ -35,7 +44,7 @@ def get_health(request, uid: int):
 
 def get_random_recipe(request):
     recipe = random.choice(json.loads(open("static/json/Recipes.json", "r").read()))
-    return {
+    return JsonResponse({
         "name": recipe["name"],
         "health_score": recipe["health_score"]
-    }
+    })

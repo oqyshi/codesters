@@ -5,28 +5,18 @@
 {% block content %}
   <div class="main-board">
 
-    <div id="chartContainer" style="height: 270px; width: 100%;"></div>
+    <span id="recipy" class="quote">Get your recipy for today!</span>
+    <img src="{% static 'images/accenture-black.png' %}" class="footer-logo" alt="">
   </div>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script>
-      function renderChart(health_data) {
-          var chart = new CanvasJS.Chart("chartContainer", {
-              theme: "light2",
-              title: {
-                  text: "Your health stats"
-              },
-              data: [{
-                  type: "line",
-                  indexLabelFontSize: 16,
-                  dataPoints: health_data
-              }]
-          });
-          chart.render();
-      }
+      function setRecipy() {
+          fetch('https://oqyshi.kz/recypy/')
+              .then(response => response.json())
+              .then(data => document.getElementById("recipy").innerHTML = data.name);
+      };
+      setRecipy();
 
-      fetch('http://127.0.0.1:8000/health/1')
-          .then(response => response.json())
-          .then(data => renderChart(data.health_data));
   </script>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 

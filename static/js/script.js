@@ -9,6 +9,11 @@ setInterval(() => {
 }, 3000);
 
 
+
+
+
+
+
 function showTime() {
     var date = new Date();
     var h = date.getHours();
@@ -49,3 +54,26 @@ function renderChart(health_data) {
 fetch('https://oqyshi.kz/health/1')
     .then(response => response.json())
     .then(data => renderChart(data.health_data));
+
+    tasksMeeting.onclick = () => {
+        window.open('https://meet.jit.si/START_Hack_2021_Test','popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
+    }
+
+    boardMeeting.onclick = () => {
+        window.open('https://meet.jit.si/START_Hack_2021_Test','popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
+    }
+
+    calendar.addEventListener("click", function(){
+        alert("Calendar!")
+    })
+
+
+var hidebtn = document.getElementById("hide")
+hidebtn.addEventListener("click", function(){
+    document.getElementById("collapseExample").style.display = "none";
+})
+
+var showbtn = document.getElementById("show")
+showbtn.addEventListener("click", function(){
+    document.getElementById("collapseExample").style.display = "block";
+})
